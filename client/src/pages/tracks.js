@@ -31,9 +31,12 @@ const Tracks = () => {
 
   if (error) return `ERROR! ${error.message}`;
 
-  return <Layout grid> {data?.tracksForHome?.map((track) => (
-    <TrackCard key={track.id} track={track} />
-  ))} </Layout>;
+  return (
+    <Layout grid> {data?.tracksForHome?.map((track) => (
+      <TrackCard key={track.id} track={track} />
+      ))} 
+    </Layout>
+  );
 };
 
 export default Tracks;
