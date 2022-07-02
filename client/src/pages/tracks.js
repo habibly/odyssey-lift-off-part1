@@ -32,7 +32,7 @@ const Tracks = () => {
   if (error) return `ERROR! ${error.message}`;
 
   return <Layout grid> {data?.tracksForHome?.map((track) => (
-    <TrackCard track={track} />
+    <TrackCard key={track.id} track={track} />
   ))} </Layout>;
 };
 
